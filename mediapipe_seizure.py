@@ -310,9 +310,9 @@ def main():
                     if seize_dur > 0:
                         cv2.putText(frame_list[0], seize_text, (right_margin // 2, row_size * 20), cv2.FONT_HERSHEY_PLAIN,
                         font_size, seize_text_color, font_thickness)
-            cv2.imshow('pose detection', vis_img)
+            cv2.imshow('seizure detection', vis_img)
         elif time.time() > start_time + offset_delay:
-            cv2.imshow('pose detection', frame_list.pop(0))
+            cv2.imshow('seizure detection', frame_list.pop(0))
 
         if cv2.waitKey(1) == 27:
             break
